@@ -1,0 +1,314 @@
+/* Genel Stil */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background: #f4f4f4;
+    color: #333;
+    padding-bottom: 50px; /* Footer'ın sayfanın altında görünmesi için boşluk ekledik */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Sayfanın tamamını kapsayacak şekilde */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Header ve Menü */
+header {
+    background: #333;
+    color: white;
+    padding: 10px 0; /* Menü için padding */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+nav ul li {
+    margin: 0 20px;
+    padding: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+nav ul li a:hover {
+    background: #0077b6;
+}
+
+/* Mobil Menü */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+.menu-toggle span {
+    background: white;
+    height: 3px;
+    margin: 5px 0;
+    width: 25px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links.active {
+    display: block;
+    flex-direction: column;
+    background: #333;
+    padding: 10px 0;
+}
+
+/* Hero Section */
+#hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+    background: url('hero-image.jpg') no-repeat center center/cover;
+    color: #333;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-text {
+    flex: 1;
+    text-align: left;
+    animation: fadeIn 2s ease-out;
+    margin-right: 20px; /* Sağdaki içerikten biraz boşluk bırakmak için */
+}
+
+.hero-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #f4f4f9;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.hero-text p {
+    margin-bottom: 1.5rem;
+    color: #f4f4f9;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.hero-text a {
+    color: white;
+    background: #0077b6;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.hero-text a:hover {
+    background: #005f8c;
+}
+
+#hero:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    filter: blur(8px);
+    z-index: -1;
+}
+
+/* Button */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #0077b6;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #005f8c;
+}
+
+/* About Section */
+#about {
+    padding: 2rem 0;
+    background: #fff;
+    color: #333;
+}
+
+#about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+#about p {
+    line-height: 1.8;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Blog Yazıları */
+#blog {
+    padding: 2rem 0;
+    background: #fff;
+    color: #333;
+}
+
+#blog h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+#blog .post {
+    margin-bottom: 3rem; /* Yazılar arasına daha fazla boşluk ekledik */
+    padding: 1.5rem;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#blog .post h3 {
+    font-size: 2rem;
+    color: #0077b6;
+}
+
+#blog .post p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+#blog .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #0077b6;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+#blog .btn:hover {
+    background: #005f8c;
+}
+
+/* İletişim Bölümü */
+#contact {
+    padding: 2rem 0;
+    background: #f4f4f4;
+}
+
+#contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button[type="submit"] {
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    background: #0077b6;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: auto;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    #hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-image {
+        margin-top: 1.5rem;
+    }
+
+    #blog .post {
+        padding: 1rem;
+    }
+
+    #about p {
+        font-size: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero-text h2 {
+        font-size: 2rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+    }
+
+    .btn {
+        padding: 8px 15px;
+    }
+
+    #blog .post h3 {
+        font-size: 1.5rem;
+    }
+}
