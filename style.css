@@ -5,6 +5,7 @@ body {
     line-height: 1.6;
     background: #f4f4f4;
     color: #333;
+   
     display: flex;
     flex-direction: column;
     min-height: 100vh; /* Sayfanın tamamını kapsayacak şekilde */
@@ -259,7 +260,7 @@ footer {
     background: #0077b6;
     color: white;
     text-align: center;
-    padding: 10px 0;
+    padding: 1px 0;
     position: relative;
     bottom: 0;
     width: 100%;
@@ -315,11 +316,11 @@ footer {
 #back-to-top {
     display: none;
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 70px;
+    right: 10px;
     width: 50px;
     height: 50px;
-    background-color: #007BFF;
+    background-color: #6e6c6c;
     color: #fff;
     text-align: center;
     line-height: 50px;
