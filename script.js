@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Mobil Menü
+
     const menuToggle = document.querySelector(".menu-toggle");
     const navLinks = document.querySelector(".nav-links");
 
@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // Blog Yazıları Animasyonu
+
     const posts = document.querySelectorAll(".post");
     const isMobile = window.innerWidth <= 768;
 
@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // İletişim Formu İşlemleri
+
     const contactForm = document.getElementById("contact-form");
     const formMessage = document.getElementById("form-message");
 
@@ -47,7 +47,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // Scroll animasyonu
     const hero = document.querySelector("#hero");
     const about = document.querySelector("#about");
 
@@ -58,4 +57,23 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }
+});
+
+const backToTopButton = document.getElementById("back-to-top");
+
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+        backToTopButton.style.display = "block";
+    } else {
+        backToTopButton.style.display = "none";
+    }
+});
+
+
+backToTopButton.addEventListener("click", (event) => {
+    event.preventDefault();
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
 });
